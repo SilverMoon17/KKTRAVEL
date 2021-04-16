@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+}
+
+.app {
+    min-height: 1080px;
+    background:rgba(1, 2, 2, 0.3);
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Medium.eot');
+    src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
+        url('../fonts/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Medium.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Medium.woff') format('woff'),
+        url('../fonts/SFProDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Heavy.eot');
+    src: local('SF Pro Display Heavy'), local('SFProDisplay-Heavy'),
+        url('../fonts/SFProDisplay-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Heavy.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Heavy.woff') format('woff'),
+        url('../fonts/SFProDisplay-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Thin.eot');
+    src: local('SF Pro Display Thin'), local('SFProDisplay-Thin'),
+        url('../fonts/SFProDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Thin.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Thin.woff') format('woff'),
+        url('../fonts/SFProDisplay-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Light.eot');
+    src: local('SF Pro Display Light'), local('SFProDisplay-Light'),
+        url('../fonts/SFProDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Light.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Light.woff') format('woff'),
+        url('../fonts/SFProDisplay-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Bold.eot');
+    src: local('SF Pro Display Bold'), local('SFProDisplay-Bold'),
+        url('../fonts/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Bold.woff') format('woff'),
+        url('../fonts/SFProDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Black.eot');
+    src: local('SF Pro Display Black'), local('SFProDisplay-Black'),
+        url('../fonts/SFProDisplay-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Black.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Black.woff') format('woff'),
+        url('../fonts/SFProDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Ultralight.eot');
+    src: local('SF Pro Display Ultralight'), local('SFProDisplay-Ultralight'),
+        url('../fonts/SFProDisplay-Ultralight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Ultralight.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Ultralight.woff') format('woff'),
+        url('../fonts/SFProDisplay-Ultralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Semibold.eot');
+    src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'),
+        url('../fonts/SFProDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Semibold.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Semibold.woff') format('woff'),
+        url('../fonts/SFProDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Regular.eot');
+    src: local('SF Pro Display Regular'), local('SFProDisplay-Regular'), local('SFProDisplay'),
+        url('../fonts/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Regular.woff') format('woff'),
+        url('../fonts/SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.container>* {
+    margin-left: 176px;
+    margin-right: 176px;
+}
+.header {
+    padding-top: 60px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.menu-button {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    width: 48px;
+    height: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.menu-line {
+    background: white;
+    display: block;
+    width: 48px;
+    height: 2px;
+    border-radius: 20px;
+}
+.facebook-link {
+    margin-right: 40px;
+}
+.title {
+    font-size: 80px;
+    line-height: 84px;
+    color: #FFFFFF;
+    max-width: 634px;
+    margin-top: 190px;
+}
+.description-text {
+    font-size: 17px;
+    line-height: 16px;
+    color: #FFFFFF;
+    max-width: 501px;
+    margin-top: 40px;
+}
+.order-button {
+    padding: 33px 81px;
+    background: #E8594E;
+    border-radius: 8px;
+    border: none;
+    margin-top: 60px;
+    outline: none;
+}
+.order-button:hover {
+    cursor:pointer;
+    opacity: 0.9;
+}
+.button-text {
+    font-size: 20px;
+    line-height: 14px;
+    letter-spacing: 2.18182px;
+    color: #FFFFFF;
+}
+
+.input-group {
+    background: #EBEBEB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 75px;
+    min-width: 1066px;
+    margin-top: 151px;
+}
+.input-search {
+    background-color: transparent;
+    border:none;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    padding-left: 23px;
+}
+.button-search {
+    width: 19px;
+    height: 19px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+.icon-search {
+    fill: black;
+}
+.bottom {
+    display: flex;
+    position: relative;
+}
+.swiper-container {
+    width: 502px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px 8px 0px 0px;
+}
+.swiper-description {
+    font-size: 15px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 2.18182px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 44px 0;
+    margin: 0;
+    background: #73AFBA;
+    border-radius: 0px 4px 0px 0px;
+}
+.swiper-img-block {
+    width: 502px;
+    height: 280px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.swiper-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider-button-prev {
+    position: absolute;
+    left: 50px;
+    bottom: 41px;
+    z-index: 9999;
+}
+.slider-button-next {
+    position: absolute;
+    right: 50px;
+    bottom: 41px;
+    z-index: 9999;
+}
+.slider-button-prev:hover {
+    cursor:pointer;
+}
+.slider-button-next:hover {
+    cursor:pointer;
+}
+.places-title {
+    max-width: 767px;
+    font-size: 64px;
+    line-height: 80px;
+    color: #1C2E3D;
+    margin-top: 150px;
+    margin-bottom: 96px;
+}
+.attractions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+.place {
+    width: 367px;
+    height: 551px;
+    position: relative;
+}
+.places-img {
+    object-fit: cover;
+    width: 367px;
+    height: 551px;
+    border-radius: 8px;
+}
+.place::before {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    transition: .3s;
+}
+/* .place::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    transition: .4s;
+} */
+.place:hover::before {
+    content: '';
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(115, 175, 186, 0.9); */
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.place:hover::after {
+    content: 'Гостиница «Cosmos»';
+    position: absolute;
+    opacity: 1;
+    bottom: 61px;
+    left: 53px;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+.place-1:hover::after {
+    content: 'Памятник Героям-Комсомольцам';
+    position: absolute;
+    bottom: 61px;
+    left: 53px;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+.place-2:hover::after {
+    content: 'Памятник жертвам сталинских репрессий';
+    position: absolute;
+    bottom: 61px;
+    left: 53px;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+.place-3:hover::after {
+    content: 'Старый Орхей';
+    position: absolute;
+    bottom: 61px;
+    left: 53px;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+.inspiration-title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+    color: #1C2E3D;
+}
+.inspiration-text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #788692;
+    max-width: 634px;
+    margin: 0 auto;
+}
+.inspiration-block {
+    display: flex;
+}
+.inspiration-image {
+    width: 100%;
+    max-height: 500px;
+    min-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.inspiration-image.medium {
+    width: 100%;
+    min-height: 700px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.large {
+    width: 66%;
+}
+.small {
+    width: 32%;
+}
+.medium {
+    width: 33%;
+}

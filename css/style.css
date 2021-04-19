@@ -117,6 +117,20 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaNeueCyr-Bold.eot');
+    src: local('Helvetica Bold'), local('Helvetica-Bold'), local('HelveticaBold'),
+        url('../fonts/HelveticaNeueCyr-Bold.eot#iefix') format('embedded-opentype'),
+        url('../fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+        url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'SF Pro Display', sans-serif;
 }
@@ -127,6 +141,10 @@ ul {
 a {
     text-decoration: none;
 }
+
+.fixed-page {
+        overflow: hidden;
+    }
 .flex {
     display: flex;
     align-items: center;
@@ -152,6 +170,10 @@ a {
     color: #FFFFFF;
     text-decoration: none;
 }
+.logo.black {
+    margin-top: 100px;
+    color: #000;
+}
 .menu-button {
     padding: 0;
     display: flex;
@@ -163,6 +185,27 @@ a {
     border: none;
     cursor: pointer;
     outline: none;
+}
+.burger-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99999999;
+    background: rgb(184, 184, 184);
+    height: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all .3s ease;
+}
+.burger-menu.visible {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+    box-shadow: 0 0 0 9999px rgba(0,0,0, 0.7);
 }
 .menu-line {
     background: white;
@@ -189,7 +232,8 @@ a {
     margin-top: 40px;
 }
 .order-button {
-    padding: 33px 81px;
+    padding-top: 33px;
+    padding-bottom: 33px;
     background: #E8594E;
     border-radius: 8px;
     border: none;
@@ -205,6 +249,7 @@ a {
     line-height: 14px;
     letter-spacing: 2.18182px;
     color: #FFFFFF;
+    padding: 33px 81px;
 }
 
 .input-group {
@@ -415,6 +460,95 @@ a {
 .medium {
     width: 33%;
 }
+.order {
+    position: relative;
+    padding-bottom: 200px;
+}
+.order-title {
+    font-size: 64px;
+    line-height: 80px;
+    color: #FFFFFF;
+    padding-top: 336px;
+    padding-left: 135px;
+    margin-bottom: 40px;
+}
+.order-text {
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    max-width: 600px;
+    padding-left: 135px;
+    padding-bottom: 174px;
+}
+.order-block {
+    background: url('../img/order-bg.png');
+    position: relative;
+}
+.order-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.order-info {
+    position: relative;
+    z-index: 3;
+}
+.order-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    background: #FFF;
+    border-radius: 8px 8px 8px 8px;
+    position: absolute;
+    z-index: 9999;
+    bottom: 133px;
+    right: 133px;
+}
+.order-form>* {
+    margin: auto;
+}
+.order-input {
+    border:none;
+    border-bottom: 1px solid rgba(28, 46, 61, 0.3);
+    outline:none;
+    min-width: 357px;
+    padding-top: 15px;
+}
+.order-label {
+    font-size: 15px;
+    line-height: 13px;
+    letter-spacing: 2px;
+    color: #1C2E3D;
+}
+.order-label, .order-input {
+    display: block;
+}
+.btn {
+    width: 100%;
+    border-radius: 0px 0px 8px 8px;
+}
+.order-btn-text {
+    color:#FFF;
+    font-size: 16px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 2.18182px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
 
 .footer{
 	border-top: 1px solid #d9d9d9;
@@ -447,7 +581,8 @@ a {
 .footer-container {
 	display: flex;
 	justify-content: space-between;
-	margin-left: 100px;
+    margin-left: 176px;
+    margin-right: 176px;
 }
 
 .footer-link{
@@ -462,7 +597,6 @@ a {
 }
 .subs-form{
 	width: 368px;
-	margin-right:100px ;
 }
 
 .subs-form-field{
@@ -474,6 +608,7 @@ a {
 	background-image: url("../../img/user.svg");
 	background-position: calc(100% - 31px) center;
 	background-repeat: no-repeat;
+    outline: none;
 }
 
 .subs-form-btn{

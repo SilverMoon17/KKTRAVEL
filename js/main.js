@@ -25,4 +25,34 @@ const swiper = new Swiper('.swiper-container', {
         nextEl: '.slider-button-next',
         prevEl: '.slider-button-prev',
     },
-    });
+});
+
+const menuButton = document.querySelector('.menu-button');
+const burgerMenu = document.querySelector('.burger-menu');
+const body = document.querySelector("body");
+
+menuButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+    burgerMenu.classList.toggle('visible');
+    body.classList.toggle("fixed-page");
+});
+
+document.addEventListener('click', function(event) {
+    const target = event.target;
+    const its_menu = target == burgerMenu || burgerMenu.contains(target);
+    const its_btnMenu = target == menuButton;
+    const menu_is_active = burgerMenu.classList.contains('visible');
+    
+    if (!its_menu && !its_btnMenu && menu_is_active) {
+        burgerMenu.classList.toggle('visible');
+        body.classList.toggle("fixed-page");
+    };
+});
+
+$(document).keyup(function(e) {
+    if (burgerMenu.classList.contains('visible') && e.keyCode === 27) {
+        burgerMenu.classList.toggle('visible');
+        body.classList.toggle("fixed-page");
+    };
+});

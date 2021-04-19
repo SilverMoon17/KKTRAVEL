@@ -12,6 +12,28 @@
 </head>
 <body>
     <div class="app" id="app">
+        <div class="burger-menu">
+            <a href="/" class="logo black">KKTRAVEL</a>
+            <nav>
+                <ul class="navigation">
+                    <li class="navigation-item">
+                        <a href="" class="navigation-link">Север Молдовы</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="" class="navigation-link">Центр Молдовы</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="" class="navigation-link">Юг Молдовы</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="" class="navigation-link">О нас</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="" class="navigation-link">Помощь</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div class="container">
             <header class="header">
                 <nav class="nav">
@@ -29,7 +51,7 @@
             <h1 class="title">Mолдова – приятные места, красивые люди</h1>
             <p class="description-text">Молдавия привлекает туристов живописной сельской местностью,
             массой винодельческих хозяйств, разнообразной и щедрой кухней, и привлекательными ценами на отдых.</p>
-            <button class="order-button"><span class="button-text">Заказать тур</span></button>
+            <button class="order-button"><a href="#order" class="button-text">Заказать тур</a></button>
             <div class="bottom">
                 <div class="input-group">
                     <input type="search" name="search" class="input-search" placeholder="Search">
@@ -55,31 +77,51 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <h2 class="places-title">Молдова: место, где можно найти себя</h2>
-        <div class="attractions">
-            <a class="place" data-fancybox="attractions" href="img/img1.jpg"><img class="places-img" alt="place"src="img/img1.jpg"></a>
-            <a class="place place-1" data-fancybox="attractions" href="img/img2.jpg"><img class="places-img" alt="place"src="img/img2.jpg"></a>
-            <a class="place place-2" data-fancybox="attractions" href="img/img3.jpg"><img class="places-img" alt="place"src="img/img3.jpg"></a>
-            <a class="place place-3" data-fancybox="attractions" href="img/orheiul_vechi1.jpg"><img class="places-img" alt="place"src="img/orheiul_vechi1.jpg"></a>
+    <main>
+        <div class="container">
+            <h2 class="places-title">Молдова: место, где можно найти себя</h2>
+            <div class="attractions">
+                <a class="place" data-fancybox="attractions" href="img/img1.jpg"><img class="places-img" alt="place"src="img/img1.jpg"></a>
+                <a class="place place-1" data-fancybox="attractions" href="img/img2.jpg"><img class="places-img" alt="place"src="img/img2.jpg"></a>
+                <a class="place place-2" data-fancybox="attractions" href="img/img3.jpg"><img class="places-img" alt="place"src="img/img3.jpg"></a>
+                <a class="place place-3" data-fancybox="attractions" href="img/orheiul_vechi1.jpg"><img class="places-img" alt="place"src="img/orheiul_vechi1.jpg"></a>
+            </div>
+            <h2 class="inspiration-title">Вдохновитесь пейзажами<br />Молдовы</h2>
+            <p class="inspiration-text">Сельская местность небольшой страны Молдова поражает удивительными видами богатой природы.
+                Неудивительно, что эта земля кружила голову Пушкину и вдохновляла на создание бессарабской лирики.</p>
+            <div class="inspiration-block" style="margin-top: 96px">
+                <div class="large" style="margin-right: 32px;"><img src="img/moldova_landscape1.jpg" alt="" class="inspiration-image"></div>
+                <div class="small"><img src="img/moldova_landscape2.jpg" alt="" class="inspiration-image"></div>
+            </div>
+            <div class="inspiration-block" style="margin-top: 32px">
+                <div class="medium" style="margin-right: 32px;"><img src="img/moldova_landscape3.jpg" alt="" class="inspiration-image medium"></div>
+                <div class="medium" style="margin-right: 32px;"><img src="img/moldova_landscape4.jpg" alt="" class="inspiration-image medium"></div>
+                <div class="medium"><img src="img/moldova_landscape5.jfif" alt="" class="inspiration-image medium"></div>
+            </div>
+            <div class="inspiration-block" style="margin-top: 32px; margin-bottom: 140px;">
+                <div class="small" style="margin-right: 31px;"><img src="img/molodva_landscape6.jfif" alt="" class="inspiration-image"></div>
+                <div class="large"><img src="img/moldova_landscape2.jpg" alt="" class="inspiration-image"></div>
+            </div>
+            <div class="order" id="order">
+                <div class="order-block">
+                    <div class="order-info">
+                        <h2 class="order-title">Заказать тур</h2>
+                        <p class="order-text">Невозможно в двух словах описать всю красоту и восхитительную атмосферу поистине волшебного края,
+                            страны виноградников и полей, лугов и солнца, рек и озер, волшебной страны Молдовы. Кто хоть единожды побывал в нашей
+                            маленькой стране, отзовется о ней как о крае, где воплощаются мечты, где сказка запросто может стать былью, где волшебство
+                            превращается в реальность.
+                        </p>
+                    </div>
+                </div>
+                <form action="#" class="order-form">
+                    <label class="order-label" style="padding-top:76px; margin-bottom:36px;">Имя Фамилия <input type="text" class="order-input"></label>
+                    <label class="order-label" style="margin-bottom:36px;">E-mail<input type="text" class="order-input"></label>
+                    <label class="order-label" style="padding-bottom:66px;">Номер телефона<input type="text" class="order-input"></label>
+                    <button class="btn order-button"><span class="order-btn-text">Заказать тур</span></button>
+                </form>
+            </div>
         </div>
-        <h2 class="inspiration-title">Вдохновитесь пейзажами<br />Молдовы</h2>
-        <p class="inspiration-text">Сельская местность небольшой страны Молдова поражает удивительными видами богатой природы.
-            Неудивительно, что эта земля кружила голову Пушкину и вдохновляла на создание бессарабской лирики.</p>
-        <div class="inspiration-block" style="margin-top: 96px">
-            <div class="large" style="margin-right: 32px;"><img src="img/moldova_landscape1.jpg" alt="" class="inspiration-image"></div>
-            <div class="small"><img src="img/moldova_landscape2.jpg" alt="" class="inspiration-image"></div>
-        </div>
-        <div class="inspiration-block" style="margin-top: 32px">
-            <div class="medium" style="margin-right: 32px;"><img src="img/moldova_landscape3.jpg" alt="" class="inspiration-image medium"></div>
-            <div class="medium" style="margin-right: 32px;"><img src="img/moldova_landscape4.jpg" alt="" class="inspiration-image medium"></div>
-            <div class="medium"><img src="img/moldova_landscape5.jfif" alt="" class="inspiration-image medium"></div>
-        </div>
-        <div class="inspiration-block" style="margin-top: 32px; margin-bottom: 140px;">
-            <div class="small" style="margin-right: 31px;"><img src="img/molodva_landscape6.jfif" alt="" class="inspiration-image"></div>
-            <div class="large"><img src="img/moldova_landscape2.jpg" alt="" class="inspiration-image"></div>
-        </div>
-    </div>
+    </main>
     <footer class="footer">
         <div class="footer-container">
             <nav class="footer-column">

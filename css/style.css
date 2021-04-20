@@ -313,7 +313,7 @@ a {
     position: relative;
 }
 .swiper-container {
-    width: 502px;
+    width: 33%;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -813,9 +813,12 @@ a {
 	margin-left: 32px;
 	padding-right: 35px;
 }
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
     .input-group {
-        min-width: 51%;
+        min-width: 60%;
+    }
+    .swiper-container {
+        min-width: 40%;
     }
     .attractions {
         display: flex;
